@@ -56,7 +56,6 @@ export function bookAppointment(params: BookingParams): BookingResult {
   const phone = params.phone.replace(/[\s-]/g, "");
   const licensePlate = params.licensePlate.replace(/[\s-]/g, "");
 
-  // לצורך הדמו: מספר נייד ישראלי בפורמט מקומי.
   if (
     !customerName ||
     !/^05\d{8}$/.test(phone) ||

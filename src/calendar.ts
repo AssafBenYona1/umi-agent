@@ -17,8 +17,7 @@ export interface Booking {
   licensePlate: string;
 }
 
-// נתוני דמה לצורך ההדגמה בלבד.
-// התאריך המקומי של היום הראשון ביומן יהיה מחר.
+
 function getFutureDate(daysAhead: number): string {
   const date = new Date();
   date.setDate(date.getDate() + daysAhead);

@@ -173,7 +173,6 @@ async function runAgentTurn() {
           ` | טוקני פלט: ${response.usage.output_tokens}]`,
       );
     }
-    // לא מפעילים כלים מתוך תשובה שנקטעה.
     if (response.stop_reason === "max_tokens") {
       throw new Error("תשובת המודל נקטעה במגבלת הטוקנים.");
     }
@@ -195,7 +194,6 @@ async function runAgentTurn() {
         throw new Error("חריגה ממגבלת סבבי הכלים להודעה.");
       }
 
-      // משאירים בקשה אחת לקבלת תשובה אחרי הפעלת הכלים.
       if (requestCount >= MAX_REQUESTS) {
         throw new Error("מגבלת הבקשות הושגה. הכלים לא הופעלו.");
       }
